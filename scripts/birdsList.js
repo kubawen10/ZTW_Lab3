@@ -4,7 +4,6 @@ const blueJay = {
     photo: 'https://janadamski.eu/wp-content/uploads/2021/02/modrosojka_06.jpg',
     trivia: 'The blue jay (Cyanocitta cristata) is a passerine bird in the family Corvidae, native to eastern North America. It lives in most of the eastern and central United States; some eastern populations may be migratory. Resident populations are also in Newfoundland, Canada; breeding populations are found across southern Canada. It breeds in both deciduous and coniferous forests, and is common in residential areas.',
     article: 'https://en.wikipedia.org/wiki/Blue_jay',
-
   }
 
   const stellersJay = {
@@ -47,4 +46,20 @@ const blueJay = {
     article: 'https://en.wikipedia.org/wiki/Asian_green_bee-eater',
   }
 
-  const birdsList = [northernCardinal, blueJay, stellersJay, violetSylph, shoebill, asianBeeEater];
+  const snowyOwl = {
+    name: 'Snowy owl',
+    latinName: 'Bubo scandiacus',
+    photo: 'https://storage.googleapis.com/oceanwide_web/media-dynamic/cache/widen_1600/media/default/0001/27/2f13a82c7a97db96091530353598e744af74f917.jpeg',
+    trivia: 'The snowy owl is both a specialized and generalist hunter. Its breeding efforts and global population are closely tied to the availability of tundra-dwelling lemmings, but in the non-breeding season, and occasionally during breeding, the snowy owl can adapt to almost any available prey – most often other small mammals and northerly water birds, as well as, opportunistically, carrion.',
+    article: 'https://en.wikipedia.org/wiki/Snowy_owl',
+  }
+
+  const kakapo = {
+    name: 'Kakapo',
+    latinName: 'Strigops habroptila',
+    photo: 'https://media.audubon.org/sfw_minden_90114981.jpg',
+    trivia: 'The kākāpō is critically endangered; the total known population of living individuals is 247 as of 2023. Known individuals are named, tagged and confined to four small New Zealand islands, all of which are clear of predators; however, in 2023, a reintroduction to mainland New Zealand (Maungatautari) was accomplished.',
+    article: 'https://en.wikipedia.org/wiki/K%C4%81k%C4%81p%C5%8D',
+  }
+
+  const birdsList = [northernCardinal, blueJay, stellersJay, violetSylph, shoebill, asianBeeEater, snowyOwl, kakapo];

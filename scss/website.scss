@@ -1,11 +1,13 @@
+@import 'variables.scss';
+
 body {
     margin:0;
-    background-image:url(https://t4.ftcdn.net/jpg/03/16/36/59/360_F_316365913_WKVKZW7gzsqqhkx4PgGyu0rArj5GykHK.jpg);
+    background-image:url($background-image-url);
     background-size:cover;
     background-repeat:no-repeat;
     background-attachment:fixed;
     background-position:center center;
-    font-family:serif;
+    font-family: $body-font;
     padding-top: 50px;
 }
 
@@ -28,15 +30,47 @@ div {
 .welcome-message {  
     display: inline;
     font-size: 3em;
-    color: rgb(25, 5, 88);
+    color: $navy;
     font-weight: bolder;
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 
-    text-decoration: underline solid rgb(44, 8, 161);
+    text-decoration: underline solid $marine;
     
-    border: 2px solid #000;
-    background-color: rgb(187, 210, 230);
-    padding: 0px 20px 15px 0px;
+    border: 2px solid black;
+    background-color: $light-grey;
+    padding: 15px;
+}
+
+%status-bar {
+    margin: 5px;
+    padding: 15px;
+    max-width: 50%;
+}
+
+.colors-key {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: lightgray;
+    max-width: 50%;
+    border-radius: 30px;
+    padding: 10px;
+    margin-bottom: 100px;
+
+    .no-concern-status {
+        @extend %status-bar;
+        background-color: $no-concern-status-color;
+    }
+
+    .vulnerable-status {
+        @extend %status-bar;
+        background-color: $vulerable-status-color;
+    }
+
+    .critical-status {
+        @extend %status-bar;
+        background-color: $critical-status-color;
+    }
 }
 
 .bird-cards {
@@ -45,19 +79,19 @@ div {
     grid-gap: 100px;
     margin-bottom: 50px;
     max-width: 90%;
-    cursor: pointer;
+    
 }
 
 .birdbox:hover {
-    box-shadow: 0 8px 26px 0 rgba(0,0,0,0.4);
+    box-shadow: $bird-hover-shadow;
 }
 
-.birdbox {
+%birdbox {
     border-radius: 10px;
-    background-color: rgb(61, 234, 240);
+    cursor: pointer;
 
-    max-width: 70%;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    width: 70%;
+    box-shadow: $bird-normal-shadow;
     transition: 0.3s;
 
     img {
@@ -65,21 +99,49 @@ div {
         width: 100%;
         height: 100%;
     }
+}
 
+%birdbox-content {
+    padding: 3px;
+
+    .name {
+        font-weight: bold;
+        font-size: 200%;
+        margin: 10px 0px;
+    }
+
+    .latinName {
+        font-style: italic;
+        font-size: 15pt;
+        margin: 10px 0px;
+    }
+}
+
+.no-concern-birdbox {
+    @extend %birdbox;
+    background-color: $no-concern-status-color;
     .birdbox-content {
-        padding: 3px;
-    
-        .name {
-            font-weight: bold;
-            font-size: 200%;
-            margin: 10px 0px;
-        }
-    
-        .latinName {
-            font-style: italic;
-            font-size: 15pt;
-            margin: 10px 0px;
-        }
+        @extend %birdbox-content;
+    }
+}
+
+.vulnerable-birdbox {
+    @extend %birdbox;
+    background-color: $vulerable-status-color;
+    border: solid 2px $vulerable-status-color;
+    .birdbox-content {
+        @extend %birdbox-content;
+        color: white;
+    }
+}
+
+.critical-birdbox {
+    @extend %birdbox;
+    background-color: $critical-status-color;
+    border: solid 2px $critical-status-color;
+    .birdbox-content {
+        @extend %birdbox-content;
+        color: white;
     }
 }
 
