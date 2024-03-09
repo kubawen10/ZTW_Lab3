@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/styles/navbar.css">
+    <link rel="stylesheet" href="/styles/website.css">
+</head>
+<body>
+    <nav> Menu
+        <ul>
+            <li>
+                <a href="#">Home</a>
+            </li>
+            <li>
+                <a href="#">Search</a>
+            </li>
+            <li>
+                <a href="#">Contact</a>
+            </li>
+            <li>
+                <a href="#">Sponsors</a>
+            </li>
+        </ul>
+    </nav>
+    <div class="bird-details-container hidden" id="birds-details">
+        <div class="bird-intro">
+            <img class="bird-details-image" src="https://janadamski.eu/wp-content/uploads/2021/02/modrosojka_06.jpg" alt="Bird picture" style="width:100%">
+            <h1 class="details-name">Blue jay</h1>
+            <h3 class="details-latin-name">Cyanocitta cristata</h3>
+        </div>
+        <div class="bird-trivia">
+            The blue jay (Cyanocitta cristata) is a passerine bird in the family Corvidae, native to eastern North America. It lives in most of the eastern and central United States; some eastern populations may be migratory. Resident populations are also in Newfoundland, Canada; breeding populations are found across southern Canada. It breeds in both deciduous and coniferous forests, and is common in residential areas.
+        </div>
+        <div class="button-container">
+            <button onclick="hideBirdsDetails()">Close</button>
+        </div>
+    </div>
+    <div class="main-container" id="main-container">
+        <div class="header">
+            <h1 class="welcome-message">Most interesting birds out there</h1>
+        </div>
+        <div class="bird-cards">
+            <div class="birdbox left">
+                <img src="https://janadamski.eu/wp-content/uploads/2021/02/modrosojka_06.jpg" alt="Bird picture" style="width:100%">
+                <div class="birdbox-content">
+                    <h4 class="name">Blue jay</h4>
+                    <p class="latinName">Cyanocitta cristata</p>
+                </div>
+            </div>
+            <div class="birdbox right">
+                <img src="https://wl-jasnastrona.cf.tsp.li/resize/728x/jpg/65a/b92/d1197a55b5bfcb845bac8037f9.jpg" alt="Bird picture" style="width:100%">
+                <div class="birdbox-content">
+                    <h4 class="name">Steller's jay</h4>
+                    <p class="latinName">Cyanocitta stelleri</p>
+                </div>
+        
+            </div>
+            <div class="birdbox left">
+                <img src="https://cdn.download.ams.birds.cornell.edu/api/v1/asset/373761801/1800" alt="Bird picture" style="width:100%;height:100%">
+                <div class="birdbox-content">
+                    <h4 class="name">Shoebill</h4>
+                    <p class="latinName">Balaeniceps rex</p>
+                </div>
+            </div>
+            <div class="birdbox right">
+                <img src="https://cdn.download.ams.birds.cornell.edu/api/v1/asset/244658561/1800" alt="Bird picture" style="width:100%">
+                <div class="birdbox-content">
+                    <h4 class="name">Violet-tailed sylph</h4>
+                    <p class="latinName">Aglaiocercus coelestis</p>
+                </div>
+            </div>
+            <div class="birdbox left">
+                <img src="https://cdn.download.ams.birds.cornell.edu/api/v1/asset/63667311/1800" alt="Bird picture" style="width:100%">
+                <div class="birdbox-content">
+                    <h4 class="name">Northern Cardinal</h4>
+                    <p class="latinName">Cardinal Cardinalis</p>
+                </div>
+            </div>
+            <div class="birdbox right">
+                <img src="https://cdn.download.ams.birds.cornell.edu/api/v1/asset/496221971/" alt="Bird picture" style="width:100%">
+                <div class="birdbox-content">
+                    <h4 class="name">Asian bee-eater</h4>
+                    <p class="latinName">Merops orientalis</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="scripts/birdsList.js"></script>
+    <script src="scripts/birdDetails.js"></script>
+</body>
+</html>

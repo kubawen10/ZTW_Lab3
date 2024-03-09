@@ -1,0 +1,53 @@
+body {
+  padding: 30px;
+}
+
+nav {
+  position: fixed;
+  z-index: 50;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  font-weight: bold;
+  font-size: 30px;
+  border: 3px solid rgb(87, 58, 139);
+  text-align: center;
+  background-color: rgb(5, 132, 206);
+  color: rgb(116, 208, 236);
+}
+nav ul {
+  display: none;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+nav ul li {
+  display: inline;
+  margin: 0 10px;
+  color: black;
+}
+nav a {
+  text-decoration: none;
+}
+
+nav:hover > ul {
+  display: block;
+  position: fixed;
+  width: 100%;
+  text-align: center;
+  background-color: rgb(71, 167, 223);
+}
+
+nav > ul > li:hover > ul {
+  display: block;
+  position: fixed;
+  width: 100%;
+  text-align: center;
+  background-color: rgb(152, 195, 224);
+}
+
+nav ul li:hover {
+  background-color: rgb(55, 98, 189);
+}
+
+/*# sourceMappingURL=navbar.css.map */
