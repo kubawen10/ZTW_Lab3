@@ -9,6 +9,11 @@ $marine: rgb(44, 8, 161);
 $light-grey: rgb(187, 210, 230);
 $cyan: rgb(61, 234, 240);
 
+// OPERATOR
+$font-size-normal: 16px;
+$font-size-bigger: $font-size-normal * 1.25;
+$font-size-smaller: $font-size-normal * 0.75;
+
 $no-concern-status-color: $cyan;
 $vulerable-status-color: salmon;
 $critical-status-color: red;

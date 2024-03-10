@@ -1,0 +1,15 @@
+@mixin status-bar {
+    margin: 5px;
+    padding: 15px;
+    max-width: 50%;
+}
+
+@mixin birdbox_color($color) {
+    background-color: $color;
+    border: solid 2px $color;
+
+    .birdbox-content {
+        // funkcja IF
+        color: if(lightness($color) > 50%, black, white);
+    }
+}
